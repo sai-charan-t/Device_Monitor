@@ -10,5 +10,6 @@ typedef struct
 
 int sensor_read(SensorData *data);
 void sensor_print(const SensorData *data);
+const char *sensor_get_status(const SensorData *data);
 
 #endif

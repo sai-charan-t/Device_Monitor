@@ -34,7 +34,7 @@ const char *sensor_get_status(const SensorData *data)
 		return "INVALID";
 	}
 
-	if(data->temperature >= 40.0f || 
+	if(data->temperature >= 45.0f || 
 		data->humidity >= 80.0f ||
 		data->pressure < 950.0f ||
 		data->pressure >1050.0f)
@@ -43,11 +43,4 @@ const char *sensor_get_status(const SensorData *data)
 	}
 	return "NORMAL";
 }
-
-
-
-
-
-
-
 

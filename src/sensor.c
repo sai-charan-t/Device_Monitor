@@ -26,3 +26,28 @@ void sensor_print(const SensorData *data)
 	printf("Humidity : %.1f %%\n",data->humidity);
 	printf("Pressure : %.1f hPa\n",data->pressure);
 }
+
+const char *sensor_get_status(const SensorData *data)
+{
+	if(data == NULL)
+	{
+		return "INVALID";
+	}
+
+	if(data->temperature >= 40.0f || 
+		data->humidity >= 80.0f ||
+		data->pressure < 950.0f ||
+		data->pressure >1050.0f)
+	{
+		return "WARNING";
+	}
+	return "NORMAL";
+}
+
+
+
+
+
+
+
+

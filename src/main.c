@@ -13,7 +13,7 @@ int main()
 	printf("=========Device Monitor===========\n");
 
 	sensor_print(&data);
-
+	printf("Device status : %s\n",sensor_get_status(&data));
 	return 0;
 }
 
